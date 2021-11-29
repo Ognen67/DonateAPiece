@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
-import {HomeComponent} from "./home/home.component";
-import {UserComponent} from "./user/user.component";
-import {LoginComponent} from "./login/login.component";
-import {AboutComponent} from "./about/about.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
-import {UserViewComponent} from "./user-view/user-view.component";
-import {AskForDonationComponent} from "./ask-for-donation/ask-for-donation.component";
-import {DonateComponent} from "./donate/donate.component";
+import {HomeComponent} from "./components/home/home.component";
+import {UserComponent} from "./components/user/user.component";
+import {LoginComponent} from "./components/login/login.component";
+import {AboutComponent} from "./components/about/about.component";
+import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import {UserViewComponent} from "./components/user-view/user-view.component";
+import {AskForDonationComponent} from "./components/ask-for-donation/ask-for-donation.component";
+import {DonateComponent} from "./components/donate/donate.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },

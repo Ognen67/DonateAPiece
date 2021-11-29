@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {Donation} from "../model/Donation";
-import {DonationService} from "../service/donation.service";
+import {Donation} from "../../model/Donation";
+import {DonationService} from "../../service/donation.service";
 
 @Component({
   selector: 'app-login',

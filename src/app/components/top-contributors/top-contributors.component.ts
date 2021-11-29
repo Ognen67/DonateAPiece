@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DonationService} from "../service/donation.service";
-import {User} from "../model/User";
+import {DonationService} from "../../service/donation.service";
+import {User} from "../../model/User";
 
 @Component({
   selector: 'app-top-contributors',
