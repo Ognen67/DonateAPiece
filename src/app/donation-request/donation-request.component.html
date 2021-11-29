@@ -1,1 +1,5 @@
-<p>donation-request works!</p>
+<div class="container">
+  <h1>{{donationRequest.title}}</h1>
+  <p>{{donationRequest.description}}</p>
+  <button mat-raised-button color="primary" (click)="donate(this.id)">Donate</button>
+</div>

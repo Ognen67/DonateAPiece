@@ -22,8 +22,13 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserListComponent } from './user-list/user-list.component';
 import { DonationRequestComponent } from './donation-request/donation-request.component';
-import { DonationRequestListComponent } from './donation-request-list/donation-request-list.component';
+import { DonationRequestsListComponent } from './donation-requests-list/donation-requests-list.component';
 import { TopContributorsComponent } from './top-contributors/top-contributors.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { AskForDonationComponent } from './ask-for-donation/ask-for-donation.component';
+import { DonateComponent } from './donate/donate.component';
+import { DonationClaimsListComponent } from './donation-claims-list/donation-claims-list.component';
+import { DonationClaimComponent } from './donation-claim/donation-claim.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +41,13 @@ import { TopContributorsComponent } from './top-contributors/top-contributors.co
     HeaderComponent,
     UserListComponent,
     DonationRequestComponent,
-    DonationRequestListComponent,
-    TopContributorsComponent
+    TopContributorsComponent,
+    DonationRequestsListComponent,
+    UserViewComponent,
+    AskForDonationComponent,
+    DonateComponent,
+    DonationClaimsListComponent,
+    DonationClaimComponent
   ],
   imports: [
     BrowserModule,

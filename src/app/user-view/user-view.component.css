@@ -4,7 +4,12 @@
   align-items: center;
 }
 
-.top-contributors {
+.user {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 15px;
+  width: fit-content;
 }

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../model/User";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -9,10 +10,15 @@ import {User} from "../model/User";
 export class UserComponent implements OnInit {
 
   @Input() user: User
+  @Input() id: number
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.id)
   }
 
+  viewUser() {
+    this.router.navigate(['user-view', this.id])
+  }
 }

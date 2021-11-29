@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DonationService} from "../donation.service";
+import {User} from "../model/User";
 
 @Component({
   selector: 'app-top-contributors',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopContributorsComponent implements OnInit {
 
-  constructor() { }
+  topContributors: User[] = []
+
+  constructor(private donationService: DonationService) { }
 
   ngOnInit(): void {
+    this.topContributors = this.donationService.users.sort((a, b) => (a.points > b.points ? -1 : 1)).slice(0, 3)
   }
 
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Donation} from "../model/Donation";
+import {DonationService} from "../donation.service";
 
 @Component({
   selector: 'app-donation-request',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonationRequestComponent implements OnInit {
 
-  constructor() { }
+  @Input() donationRequest: Donation
+  @Input() id: number
+
+  constructor(private donationService: DonationService) { }
 
   ngOnInit(): void {
   }
 
+  donate(id: number) {
+    this.donationService.donationRequests.splice(id, 1)
+    this.donationService.users[0].points++
+  }
 }

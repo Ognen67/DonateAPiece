@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
+import {Donation} from "../model/Donation";
+import {DonationService} from "../donation.service";
 
 @Component({
   selector: 'app-login',
@@ -11,18 +13,19 @@ export class LoginComponent implements OnInit {
   loginForm = this.formBuilder.group({
     name: ['', Validators.required],
     surname: ['', Validators.required],
-    email: ['', Validators.required],
-    password: ['', Validators.required, Validators.minLength(8)],
+    email: ['', Validators.required, Validators.email],
+    password: ['', Validators.required],
   })
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private donationService: DonationService) {
   }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value)
+    this.donationService.login(this.loginForm.value)
   }
 
 }
