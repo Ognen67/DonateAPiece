@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Observable, of} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../model/User";
-import {DonationService} from "../donation.service";
+import {DonationService} from "../service/donation.service";
 import {catchError, map, switchMap} from "rxjs/operators";
 
 @Component({

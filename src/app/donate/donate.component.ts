@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {DonationService} from "../donation.service";
+import {DonationService} from "../service/donation.service";
 
 @Component({
   selector: 'app-donate',
@@ -22,7 +22,7 @@ export class DonateComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.donateForm.value)
+    this.donationService.donationsToClaim.push(this.donateForm.value)
   }
 
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {User} from "./model/User";
-import {Donation} from "./model/Donation";
+import {User} from "../model/User";
+import {Donation} from "../model/Donation";
 import {Router} from "@angular/router";
 
 @Injectable({

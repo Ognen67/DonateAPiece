@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {DonationService} from "../donation.service";
+import {DonationService} from "../service/donation.service";
 import {Donation} from "../model/Donation";
 
 @Component({
