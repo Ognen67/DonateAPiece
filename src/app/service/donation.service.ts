@@ -17,16 +17,16 @@ export class DonationService {
   ]
 
   donationRequests = [
-    new Donation("Kaput", "Ubav crn kaput za vo zima, nosen 6 meseci"),
-    new Donation("Kaput", "Ubav crn kaput za vo zima, nosen 6 meseci"),
-    new Donation("Kaput", "Ubav crn kaput za vo zima, nosen 6 meseci"),
-    new Donation("Kaput", "Ubav crn kaput za vo zima, nosen 6 meseci")
+    new Donation("Kaput", "Enter Description Here"),
+    new Donation("Kaput", "Enter Description Here"),
+    new Donation("Kaput", "Enter Description Here"),
+    new Donation("Kaput", "Enter Description Here")
   ]
 
   donationsToClaim = [
-    new Donation("Tanktop", "crn tanktop za bilderi odlichen pogotovo so dobro ramo"),
-    new Donation("Maica", "Ubav crn kaput za vo zima, nosen 6 meseci"),
-    new Donation("Bluza po dolgi", "Ubav crn kaput za vo zima, nosen 6 meseci"),
+    new Donation("Tanktop", "Enter Description Here"),
+    new Donation("Maica", "Enter Description Here"),
+    new Donation("Bluza po dolgi", "Enter Description Here"),
   ]
 
   constructor(private router: Router) { }
