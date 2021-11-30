@@ -18,7 +18,12 @@ export class DonationRequestComponent implements OnInit {
   }
 
   donate(id: number) {
-    this.donationService.donationRequests.splice(id, 1)
-    this.donationService.users[0].points++
+    if(this.donationService.isLoggedIn) {
+      this.donationService.donationRequests.splice(id, 1)
+      this.donationService.users[0].points++
+    } else {
+      alert("You have to log in first")
+    }
+
   }
 }

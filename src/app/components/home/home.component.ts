@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DonationService} from "../../service/donation.service";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  loggedIn = undefined
+
+  constructor(private donationService: DonationService) { }
 
   ngOnInit(): void {
+    this.loggedIn = this.donationService.isLoggedIn;
   }
 
 }

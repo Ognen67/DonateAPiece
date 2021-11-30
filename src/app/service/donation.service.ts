@@ -8,12 +8,12 @@ import {Router} from "@angular/router";
 })
 export class DonationService {
 
+  isLoggedIn = false
+
   users = [
     new User("Ognen", "Todorovski", "asd@asd.com", "qwerty"),
     new User("asd", "Todorovski", "asd@asd.com", "qwerty"),
-    new User("dsa", "Todorovski","asd@asd.com", "qwerty"),
-    new User("bcs", "Todorovski", "asd@asd.com", "qwerty"),
-    new User("qwe", "Todorovski", "asd@asd.com", "qwerty"),
+    new User("dsa", "Todorovski","asd@asd.com", "qwerty")
   ]
 
   donationRequests = [
@@ -34,7 +34,7 @@ export class DonationService {
   login(loginInfo: User) {
     console.log(loginInfo)
     if(this.users[0].name == loginInfo.name && this.users[0].password == loginInfo.password) {
-      console.log("Navigate!")
+      this.isLoggedIn = true
       this.router.navigateByUrl("/home")
     }
   }

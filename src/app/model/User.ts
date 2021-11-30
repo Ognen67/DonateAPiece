@@ -11,7 +11,7 @@ export class User {
     this.surname = surname;
     this.email = email;
     this.password = password;
-    this.points = Math.ceil(Math.random()*100);
+    this.points = 0
     this.claims = 0
   }
 }
